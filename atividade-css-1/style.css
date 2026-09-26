@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Montserrat";
+  color: #404040;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: blanchedalmond;
+}
+
+form {
+  background-color: white;
+}
+
+form {
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+
+}
+
+
