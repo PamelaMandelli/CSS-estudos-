@@ -1,4 +1,4 @@
-<!doctype html>
+div<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -6,28 +6,109 @@
     <title>Atividade CSS 1</title>
 
     <link rel="stylesheet" href="style.css" />
-  </head>
+    </head>
 
-  <body>
-    <a href="teste">Teste aqui</a>| <a href="#inicial">Página inicial</a> |
-    <a href="#torneio">Torneios</a> | <a href="#promoções">Promoções </a> |
+    <body>
 
-    <h2>Cadastre e jogue conosco</h2>
-    <div class="barra-horizontal"></div>
+      <! --MENU -->
+      <header class="navbar">
 
-    <label for="email"> Digite seu e-mail</label>
-    <input type="email" id="email" />
-    <label for="password"> Digite sua senha</label>
-    <input type="password" id="password" />
+        <div class="logo">
+          <span>🎮 </span>
+          Game<span>Zone</span>
+          </div>
 
-    <div>
-      <input type="checkbox" />
-      <p>Lembrar-me</p>
-    </div>
-    <button>Entrar</button>
+          <nav>
+            <a href="#">Página Inicial</a>
+            <a href="#">Teste aqui</a>
+            <a href="#">Torneios</a>
+            <a href="#">Promoções</a>
+          </nav>
 
-    <br />
+          <button class="menu button">☰</button>
 
-    <img src="../img/cartoon-mascot.avif" width="200" />
+          </header>
+
+          <! -- Bichinho esquerdo -->
+          <div class="animal animal-left">
+
+            <div class="cartoon-mascot">
+            
+              <div class=" cartoon-ear left-ear"></div>
+              <div class=" cartoon-ear right-ear"></div>
+
+
+            <! -- Área Principal -->
+              <main class="main-content">
+                <select class="login-card">
+
+             <! -- LOGO DA CARTA -->
+                  <div class="game-icon">
+                    🎮
+                  </div>
+
+                  <h1>Bem-vindo!</h1>
+
+                  <p class="subtitle">
+                    Entre para continuar jogando
+                  </p>
+
+              <! -- FORMULÁRIO -->
+                  <form>
+
+                    <div class="input-group">
+
+                      <label for="email">
+                        E-mail
+                        </label>
+
+                        <div class="input-box">
+
+                          <span class="input-icon">✉️</span>
+
+                          <input
+                          type="email"
+                          id="email"
+                          placeholder="Digite seu e-mail"
+                          required
+                          >
+                          </div>
+                          </div>
+
+                          <div class="input-group">
+
+                            <label for="password">
+                            Senha
+                          </label>
+
+                          <div class="input-box">
+
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                            type="password"
+                            id="password"
+                            placeholder="Digite sua senha"
+                            required
+                            >
+                            </div>
+
+                            </div>
+
+ <! -- LEMBRAR SENHA -->
+
+ <div class="login-options">
+
+  <label class="remember">
+    
+    <input type="checkbox">
+    
+    <span class="custom-checkbox"></span>
+    Lembrar de mim
+
+    <br/>
+    <br/>
+
+    <img src="../img/cartoon-mascot.avif" width="200" /> 
   </body>
 </html>
