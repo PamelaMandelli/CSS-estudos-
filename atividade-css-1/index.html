@@ -1,114 +1,151 @@
-div<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atividade CSS 1</title>
 
-    <link rel="stylesheet" href="style.css" />
-    </head>
+    <style>
+      :root {
+        --altura-cabeçalho: 100px;
 
-    <body>
+        --cor-tema-padrao-1:  rgb(1, 109, 225);
+        --cor-tema-secundaria: white;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
 
-      <! --MENU -->
-      <header class="navbar">
+      body {
+        height: 100vh;
+        background-color: rgb(239, 233, 233);
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: white;
+        gap: 20px;
+        width: 80%;
+      }
 
-        <div class="logo">
-          <span>🎮 </span>
-          Game<span>Zone</span>
-          </div>
+      .cards {
+        border: 1px solid grey;
+        border-radius: 10px 10px 10px 10px;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: orange; */
+      }
 
-          <nav>
-            <a href="#">Página Inicial</a>
-            <a href="#">Teste aqui</a>
-            <a href="#">Torneios</a>
-            <a href="#">Promoções</a>
-          </nav>
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        /* justify-content: start; */
+        align-items: center;
+        height: calc(100vh-var(--altura-cabeçalho));
+      }
+      .img-card {
+        width: 150px;
+      }
 
-          <button class="menu button">☰</button>
+      header {
+        height: var(--altura-cabeçalho);
+        background-color: var(--cor-tema-padrao-1);
+      }
 
-          </header>
+      .logo-cabecalho {
+        width: 150px;
+        border-radius: 10px;
+      }
 
-          <! -- Bichinho esquerdo -->
-          <div class="animal animal-left">
+      .logo-navegaçao {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
+      }
 
-            <div class="cartoon-mascot">
-            
-              <div class=" cartoon-ear left-ear"></div>
-              <div class=" cartoon-ear right-ear"></div>
+      footer {
+        background-color: var(--cor-tema-secundaria)
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-navegaçao">
+        <img
+          src="../img/Magalu_-_novo_logo.png"
+          alt=""
+          class="logo-cabecalho"
+        />
 
+        <div>
+          <a href="">Categorias</a>
+          <a href="">Celulares</a>
+          <a href="">Cupom</a>
+          <a href="">Eletrodomésticos</a>
+          <a href="">Ofertas</a>
+          <a href="">Mercado play</a>
+        </div>
+      </div>
+    </header>
 
-            <! -- Área Principal -->
-              <main class="main-content">
-                <select class="login-card">
+    <div class="main">
+      <div class="container">
+        <div class="cards">
+          <img src="../img/tv 43.avif" alt="" class="img-card" />
 
-             <! -- LOGO DA CARTA -->
-                  <div class="game-icon">
-                    🎮
-                  </div>
+          <p>TV 43" TCL Full HD QLED 5</p>
+        </div>
+        <div class="cards">
+          <img src="../img/celular iph.avif" alt="" class="img-card" />
 
-                  <h1>Bem-vindo!</h1>
+          <p>IPhone Apple 17 256GB Preto</p>
+        </div>
+        <div class="cards">
+          <img src="../img/ps 5.jpg" alt="" class="img-card" />
 
-                  <p class="subtitle">
-                    Entre para continuar jogando
-                  </p>
+          <p>Console PlayStation 5 Slim Digital</p>
+        </div>
+        <div class="cards">
+          <img src="../img/noteb.avif" alt="" class="img-card" />
 
-              <! -- FORMULÁRIO -->
-                  <form>
+          <p>Notebook MacBook Apple Air de 15" M4</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="cards">
+          <img src="../img/guarda.avif" alt="" class="img-card" />
 
-                    <div class="input-group">
+          <p>Guarda Roupa Casal Madesa Mônaco 3 Portas</p>
+        </div>
+        <div class="cards">
+          <img src="../img/lava e seca.avif" alt="" class="img-card" />
 
-                      <label for="email">
-                        E-mail
-                        </label>
+          <p>Lava e Seca Samsung 13kg AI Control</p>
+        </div>
+        <div class="cards">
+          <img src="../img/mesa.jpeg" alt="" class="img-card" />
 
-                        <div class="input-box">
+          <p>Sala de Jantar Mesa Olímpia 120CM MDF</p>
+        </div>
+        <div class="cards">
+          <img src="../img/ar condic.avif" alt="" class="img-card" />
 
-                          <span class="input-icon">✉️</span>
+          <p>Ar Condicionado Split Hi Wall LG Dual Inverter</p>
+        </div>
+      </div>
+    </div>
 
-                          <input
-                          type="email"
-                          id="email"
-                          placeholder="Digite seu e-mail"
-                          required
-                          >
-                          </div>
-                          </div>
-
-                          <div class="input-group">
-
-                            <label for="password">
-                            Senha
-                          </label>
-
-                          <div class="input-box">
-
-                            <span class="input-icon">🔒</span>
-
-                            <input
-                            type="password"
-                            id="password"
-                            placeholder="Digite sua senha"
-                            required
-                            >
-                            </div>
-
-                            </div>
-
- <! -- LEMBRAR SENHA -->
-
- <div class="login-options">
-
-  <label class="remember">
-    
-    <input type="checkbox">
-    
-    <span class="custom-checkbox"></span>
-    Lembrar de mim
-
-    <br/>
-    <br/>
-
-    <img src="../img/cartoon-mascot.avif" width="200" /> 
+    <footer></footer>
   </body>
 </html>
